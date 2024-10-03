@@ -1,0 +1,30 @@
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    place-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.body h1{
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+.body h2{
+    font-size: 25px;
+    font-weight:lighter;
+}
+.body input{
+    width: 500px;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+.cardsList{
+    width: 90%;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1rem;
+}

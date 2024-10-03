@@ -1,0 +1,27 @@
+<section class="detail" *ngIf="card$ | async as card">
+    <div class="top">
+        <img [src]="card.card_images[0].image_url" alt="card image">
+    </div>
+    <div class="bottom">
+        <h3>{{card.name}}</h3>
+        <p>{{card.desc}}</p>
+        <p>Tipo: {{card.type}}</p>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Market</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (market of card.card_prices[0] | keyvalue; track $index) {
+                <tr>
+                    <th scope="row">{{market.key}}</th> <!--  | marketName -->
+                    <td>{{market.value}}$</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a [routerLink]="['/']">← Volver atrás</a>    
+</section>

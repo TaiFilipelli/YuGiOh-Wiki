@@ -1,0 +1,11 @@
+<body class="body">
+    <h1>YuGiOh Wiki</h1>
+    <h2>Selecciona la carta que desees para ver más info.</h2>
+    <input type="text" placeholder="Buscar carta..." [formControl]="name">
+    <section class="cardsList" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+        @for (card of cards; track $index) {
+            <app-card [card]="card"></app-card>
+        }
+    </section>
+</body>
+
