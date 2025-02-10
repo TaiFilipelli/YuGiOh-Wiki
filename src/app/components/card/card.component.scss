@@ -5,4 +5,9 @@
     border-radius: 10px;
     object-fit: cover;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.card:hover{
+    background-color: rgb(203, 197, 197);
+    transform: scale(1.03);
 }
